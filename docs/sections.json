@@ -1,19 +1,13 @@
 [
-{
-"slug": "advanced-css-course-master",
-"title": "Code principal du cours",
-"subtitle": "exercices continus"
-},
-
-
-{
-"slug": "advanced-css-course-master/projects/natours-hero",
-"title": "Projet – Natours Hero",
-"subtitle": "clip-path, centrage, keyframes",
-"learn": [
-"clip-path: polygon() pour bords diagonaux",
-"Centrage via transform + translate",
-"Animations d’entrée avec @keyframes"
-]
-}
+    {
+    "slug": "advanced-css-course-master/projects/natours-hero",
+    "title": "Natours Project",
+    "subtitle": "",
+    "learn": [
+            "clip-path: polygon() pour bords diagonaux",
+            "Centrage via transform + translate",
+            "Animations d’entrée avec @keyframes",
+            "Je changerais cette section plus tard quand j'aurais mis à jour le fichier 'pensees.txt'"
+            ]
+    }
 ]

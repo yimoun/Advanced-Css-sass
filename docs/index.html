@@ -18,19 +18,22 @@ header{margin-bottom:1.5rem}
 <body>
 <header>
 <h1>Démos — Advanced CSS & Sass</h1>
-<p>Les cartes sont construites depuis <code>docs/sections.json</code>.</p>
+<p>Ici je classe/repertorie mon évolution en suivant ce tuto.</p>
 </header>
 <ol id="list" class="grid" aria-live="polite"></ol>
 <script>
 async function main(){
 const res = await fetch('./sections.json', { cache: 'no-store' });
 const items = res.ok ? await res.json() : [];
+console.log("les items", items)
 document.getElementById('list').innerHTML = items.map(card).join('');
 }
 function esc(s){return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')}
 function hrefFor(it){
+    //C'est ici que je construit l'URL d'une carte (à bien faire)
 // slug = chemin relatif depuis /docs vers un DOSSIER qui contient index.html
-return `${it.slug.replace(/^\/+|\/+$/g,'')}/index.html`;
+return `./advanced-css-course-master/Natours/starter/index.html`;
+//return `${it.slug.replace(/^\/+|\/+$/g,'')}/index.html`;
 }
 function card(it){
 const href = hrefFor(it);
