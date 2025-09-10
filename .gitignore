@@ -235,7 +235,7 @@ AppPackages/
 BundleArtifacts/
 Package.StoreAssociation.xml
 _pkginfo.txt
-*.appx
+*.apps
 *.appxbundle
 *.appxupload
 
@@ -420,3 +420,34 @@ FodyWeavers.xsd
 
 .DS_Store
 docs/.DS_Store
+
+
+# ----- Front-end / CSS-Sass -----
+# Builds
+dist/
+build/
+out/
+
+# Bundlers / tools caches
+.vite/
+.esbuild/
+.cache/
+.parcel-cache/
+.sass-cache/
+.stylelintcache
+.eslintcache
+
+# Frameworks
+.next/
+.nuxt/
+.angular/
+
+# Maps et logs
+*.css.map
+*.js.map
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
