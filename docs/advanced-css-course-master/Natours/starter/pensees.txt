@@ -1,0 +1,13 @@
+Section 2:
+Dans cette (première) section j'ai vraiment beaucoup appris :
+--> Sur des propriétés CSS telles que "clip-path".à
+--> Aussi la manière la plus simple de centrer quoi que ce soit avec des propriétés telles que "transformer", "top" and "left".
+--> Comment créer des animations CSS en utilisant "keyframes" et la propriété "animation".
+--> Comment et pourquoi utiliser des pseudo-class/pseudo-element tels que "::after". Aussi comment créer une animation personnalisée sur le pseudo-element "hover"  and utilisant la propriété "transition"
+
+Toutes ces notions ont étés explorées, apprises et appliquées dans la section "<header>" de la page html finale.
+
+À chaque fois que le besoin d'approfondir ce que je voyais, je n'ai pas hésité à aller lire la documentation concernée.
+
+Section 3: 
+Dans cette (2e) section j'ai vraiment beaucoup appris :
