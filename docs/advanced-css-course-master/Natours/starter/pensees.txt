@@ -12,8 +12,6 @@ Toutes ces notions ont étés explorées, apprises et appliquées dans la sectio
 Section 3: 
 Dans cette (2e) section j'ai vraiment beaucoup appris :
 
-
-
 Les trois piliers pour de bons site web et des bonnes applications web:
 --> Le "Responsive design"
     --> Fluid layouts
@@ -36,3 +34,18 @@ Les trois piliers pour de bons site web et des bonnes applications web:
     --> Use a CSS preprocessor: example Sass
     --> Les images
     --> Compress images
+
+
+1: Load HTML
+2: Parse HTML
+    --> Load CSS: 
+        --> Parse CSS:
+            --> cascade: Resolve conflicting CSS declaration
+            --> traitement des valeurs CSS finales
+        --> Le CSS final est également stocké dans une structure arborescente CSSOM (CSS Object Model)
+3: Document Object Model (DOM): Le navigateur crée le modèele de document appelé DOM qui décrit le document web comme
+ un arbre généalogique
+4: Tous ceux-ci sont stockés dans le "Render Tree" et c'est ce qui conduit au "Website rendering: the visual formatting model"
+pour finalement avoir le "Final rendered website" 
+
+The cascade and specificity: 

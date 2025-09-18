@@ -37,6 +37,7 @@ return `.docs/advanced-css-course-master/Natours/starter/index.html`;
 }
 function card(it){
 const href = hrefFor(it);
+console.log('le contenu de href', href);
 const bullets = (it.learn||[]).slice(0,4).map(b => `<li>${esc(b)}</li>`).join('');
 return `<li class="card">
 <a href="${href}"><h3>${esc(it.title)}</h3></a>
