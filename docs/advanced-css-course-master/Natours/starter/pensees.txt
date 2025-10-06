@@ -48,4 +48,6 @@ Les trois piliers pour de bons site web et des bonnes applications web:
 4: Tous ceux-ci sont stockés dans le "Render Tree" et c'est ce qui conduit au "Website rendering: the visual formatting model"
 pour finalement avoir le "Final rendered website" 
 
-The cascade and specificity: 
+The cascade and specificity: "!important" permet d'accorder une spécifité 
+plus grande à un sélecteur, et ceci indique (très souvent
+) que le code a besoin d'être refactoré
