@@ -37,7 +37,13 @@ if (res.ok) return await res.json();
 } catch (_) { /* probablement CORS en file:// */ }
 // Fallback: lit le JSON inline si fetch a échoué
 const raw = document.getElementById('sections-fallback')?.textContent || '[]';
-try { return JSON.parse(raw); } catch { return []; }
+try { return JSON.parse(raw); } catch { return []; }}
+function esc(s){return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')}
+function hrefFor(it){
+    //C'est ici que je construit l'URL d'une carte (à bien faire)
+// slug = chemin relatif depuis /docs vers un DOSSIER qui contient index.html
+return `../docs/advanced-css-course-master/Natours/starter/index.html`;
+//return `${it.slug.replace(/^\/+|\/+$/g,'')}/index.html`;
 }
 
 
