@@ -1,4 +1,4 @@
-Section 2:
+SECTION 2:
 Dans cette (première) section j'ai vraiment beaucoup appris :
 --> Sur des propriétés CSS telles que "clip-path".à
 --> Aussi la manière la plus simple de centrer quoi que ce soit avec des propriétés telles que "transformer", "top" and "left".
@@ -9,17 +9,20 @@ Toutes ces notions ont étés explorées, apprises et appliquées dans la sectio
 
 À chaque fois que le besoin d'approfondir ce que je voyais, je n'ai pas hésité à aller lire la documentation concernée.
 
-Section 3: 
+
+
+
+SECTION 3:
 Dans cette (2e) section j'ai vraiment beaucoup appris :
 
-Les trois piliers pour de bons site web et des bonnes applications web:
---> Le "Responsive design"
+Les trois piliers pour de bons site web et des bonnes applications web (Côté FrontEnd):
+(1) Le "Responsive design"
     --> Fluid layouts
     --> Media queries
     --> Responsive images
     --> Correct units
     --> Desktop-first vs mobile-first
---> Du code "maintenable" et "scalable/évolutif"
+(2) Du code "maintenable" et "scalable/évolutif"
     --> Clean
     --> Easy-to-understand
     --> Growth
@@ -27,13 +30,16 @@ Les trois piliers pour de bons site web et des bonnes applications web:
     --> How to organize files
     --> How to name classes
     --> How to structure HTML
---> La performance web (plus performante et plus rapide)
+(3) La performance web (plus performante et plus rapide)
     --> Less HTTP requests: le moins possible de requettes HTTP
     --> Less code
     --> Compress code
     --> Use a CSS preprocessor: example Sass
     --> Les images
     --> Compress images
+
+
+HOW CSS WORKS BEHIND THE SCENES
 
 
 1: Load HTML
@@ -48,6 +54,127 @@ Les trois piliers pour de bons site web et des bonnes applications web:
 4: Tous ceux-ci sont stockés dans le "Render Tree" et c'est ce qui conduit au "Website rendering: the visual formatting model"
 pour finalement avoir le "Final rendered website" 
 
-The cascade and specificity: "!important" permet d'accorder une spécifité 
+THE CASCADE AND SPECIFICITY: 
+"!important" permet d'accorder une spécifité 
 plus grande à un sélecteur, et ceci indique (très souvent
 ) que le code a besoin d'être refactoré
+CASCADE: Process of combining different stylesheets and resolving conflicts between different CSS rules and declarations, 
+    when more than one rule applies to certain element.
+
+Differents sources of CSS declarations:
+    -->Author: par le dev lui meme
+    --> User 
+    --> Browser (qui est par défaut)
+CASCADE résout les conflits en tenant compte de l'importance, de la spécificité et l'ordre des sources de déclaration
+
+SPECIFICITY: From the smallest to the largest:
+     1. inline style 
+     2.IDs 
+     3.Calsses, pseudo-classes, attributes 
+     4.Elemnt, pseudo-elements
+La SPECIFICITY n'est en réalité pas un nombre, mais un nombre pour chacune des 4 catégories. Pour chcaune d'elles, 
+nous comptons le nombre d'occurences dans le sélecteur. 
+Parmi ceux ayant la meme importance, apres avoir déterminer les spécificités, pour déterminer quel sélecteur s'applique: On commence à regarder
+les nombres de gauche à droite en commancant par la catégorie la plus spécifique et ensuite on procède par élimination à chaque fois que
+l'occurence d'une catégories est plus pétite entre deux sélecteurs.
+De facon plus pratique, pour faire applqiuer une déclaration CSS qui ne fonctionne pas, À même niveau d'importance, 
+je pars du sélecteur avec la spécifité la plus grande au niveau de la catégorie qui les différencie et j'augemente l'occurence au niveau 
+de cette meme catégorie (pour resté le plus précis possible) de sorte à ce que la déclaration qui ne fonctionnait pas fonctionne.
+
+HOW CSS is PARSED:
+CSS values are processed in 6 steps:
+    1. Declarared value: author declarations
+    2. Cascaded value: after the cascade
+    3. Specified value: defaulting, if there is no cascaded value
+    4. Computed value: converting relative value to absolute, according to the relative unit used.
+    5. Used value: final calculations, based on layout.
+    6. Actual value: After the browser and device restrictions.
+--> "% unit":for %(fonts), the reference is the parent's computed font-size; for %(lengths) like height, padding, marging the reference
+ is always the parent element width.
+--> "em unit": for em(font) the reference is simply the parent computed font-size, similar for the pourcentage  ; 
+for em(lengths) the reference is the current element computed font-size
+--> "rem unit": is always relative to the root font-size  wihch is usaually 16px.
+--> "vh unit" is 1% of viewport height and width
+--> " vw unit"  is 1% of viewport height and width
+
+HERITENCE IN CSS:
+"inherit" keyword forces inheritance on a certain property. Some properties can not be herited or orthers not. 
+"initial" keyword resets a property to its initial value.
+For example, properties related to text are inherited: font-family, font-size, color, etc.
+
+CONVERTING PX TO REM: An Effective Workflow:
+    À NOTER QUE: "rem unit" n'est pas utilisé ou supporté par le navigateur Explorer 9, mais pas presque tous les autres.
+How and why we use rem units in our project: Idéalement on le fait au début du projet
+A great workflow for converting px to rem: is to set the font-size root at the begining of the project, using the percentage (% of 16px)
+
+HOW CSS RENDERS A WEBSITE: THE VISUAL FORMATTING MODEL:
+The Visual Formatting model: Algorithm that calculates boxes and determines the layout of theses boxes, 
+for each element in the render tree, in order to determine the final layout of the page. It uses some parameters like:
+    --> Dimnensions of boxes: the box model;
+    --> Box type: inline, block, and inline-block;
+    --> Position scheme: floats and positioning;
+    --> Stacking contexts;
+    --> Other elements in the render tree;
+    --> Other external informations like viewport size, dimensions of the images, etc.
+using "box-sizing: border-box" the height, width will be defined for the entire box, including the padding, border, not just for THE CONTENT AREA.
+
+"display: block": --> Elements formatted visually as a blocks.
+                  --> 100% of the parent's width.
+                  --> vertically, one after another.
+                  --> Box-model applies as showed.
+"display: inline": --> Content is distributed in lines.
+                  --> Occupies only the content's space (not border, padding, margin of thier parent's element).
+                  --> No line-breaks.
+                  --> No heights and widths.
+                  --> Paddings and margins only horizontal (left and right)
+"display: inline-block":--> A mix of block and inline.
+                        --> Occupies only the content's space.
+                        --> No line-break.
+                        --> Box-model applies as showed.
+POSITIONING SHCEMES: NORMAL FLOW, ABSOLUTE POSITIONING and FLOATS
+"Normal flow" using by "position: relative": --> Default positioning scheme;
+               --> Not floated;
+               --> Not absolutely positioned;
+               --> Elements laid out according to their source order.
+"Floats":  float: left, float: right
+"Normal flow" using by "position: absolute position: fixed": 
+               --> Element is removed from the normal flow;
+               --> No impact on surronding content or elements;
+               --> We use top, bottom, left and right to offset the element from its relatively positioned container;
+STACKING CONTEXTS: determines in wich order elements are render on the page. A new stacking context can be created by differents css properties.
+The most whiling knwon is "z-index". stacking contexts are like layouts that form a stack. Layers on the bottom of the stack appear at first, and elements
+higher up the stack appear on the top overlapping the elements below them. The one with the higher z-index appears on top and the one with 
+the lowest z-index appears on bottom.
+
+CSS Architecture, Components and BEM:
+Il est important de prendre de bonnes décisions des le début du projet pour avoir un code Clean, Modular, Reusable, Ready for growth.
+Good stategies, good mindset: THINK-BUILD-ACHITECTURE
+THINK: Think about the layout of your webpage or web app before writing code.
+BUILD: Build your layout in HTLML and CSS with a consistent structure for naming classes.
+ARCHITECTURE: Create a loigical architecture for your CSS with files and folders.
+
+1ère étape: THINK
+COMPONENT-DRIVEN DESIGN:
+--> Modular bulding blocks that make up interfaces.
+--> Held together by the layout of the page;
+--> Re-usable across a project, and between different projects.
+--> Independent, allowing us to use them anywhere on thge page
+2e étape: BUILD
+BEM (Block Element Modifier):
+--> BLOCK: standlone component taht is meaningful on its own.
+--> ELEMENT: part of a block that has no standalone meaning;
+--> MODIFIER: a different version of a blcok or an element
+Dans le code ça ressemble à ceci: 
+.block {}
+.block__element {}
+.block__element--modifier {}
+1ère étape: ARCHITECTURE
+The 7-1 PATTERN: 7 different folders for partial Sass files, and 1 main Sass file to import all other files into
+ a compiled CSS stylesheet.
+--> The 7 folders: .base/ .components/ .layout/ .pages/ .themes/ .abstracts/ .vendors/
+--> Held together by the layout of the page;
+--> Re-usable across a project, and between different projects.
+--> Independent, allowing us to use them anywhere on thge page
+
+
+SECTION 4: Introduction to Sass and NPM
