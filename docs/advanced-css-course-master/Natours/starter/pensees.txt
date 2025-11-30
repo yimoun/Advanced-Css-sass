@@ -178,3 +178,27 @@ The 7-1 PATTERN: 7 different folders for partial Sass files, and 1 main Sass fil
 
 
 SECTION 4: Introduction to Sass and NPM
+what is SASS: 
+C'est un pre-processeur CSS, une extenesion de CSS qui ajoute beaucoup de puissance et d'élégance au langage de base.
+On l'utilse pour résoudre les problèmes que nous avons avec CSS, il fournit des fonctionnalités et outils pratiques 
+que CSS n'a tout simplement pas.
+Variables: for reusable values such as colors, font-sizes, spacing, etc.
+Nesting: to nest selectors inside of one another, allowing us to write less code;
+Operators: for mathematical operations right inside of CSS;
+Partial and imports: to write CSS in different files and importing them all into one signle file;
+Mixins: to write reusable pieces of CSS code;
+Functions: similar to mixins, with the difference that they produce a value that cam be used;
+Extends: to make different selectors inherit declarations that are common to all of them;
+Control directives: for writing complex code using conditionals and loops
+
+Il existe deux syntax SASS: SASS syntax (avec indentation) et SCSS syntax (qui préserve l'apparence du CSS original)
+Variables and Nesting:
+Fist Steps with Saas: Mixins, Extends and Functions:
+Extensions and mixins seem to work in opposite ways. Mixins allow you to call a mixin function anywhere in your code as a reusable element. 
+But extensions are useful for multiple selectors that are thematically related, so that these selectors will be associated 
+with the CSS declaration that is used to extend... Something like that.
+Let's intsall SASS Loaclly: with de package node-sass 
+"npm install live-server -g" et "starter % live-server" pour installer et lancer un serveur local Node.js 
+
+
+SECTION 5: Natours Project-using Advanced CSS and Saas
