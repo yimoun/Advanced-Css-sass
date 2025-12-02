@@ -1,0 +1,24 @@
+// here we put all the basics definitions about our entire project
+
+/* Universal selector */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    
+}
+
+/* set the font-size root to 10px, so that 1rem = 10px */
+html {
+
+    //this defines what 1rem is...it's not really about typography
+    /* font-size: 10px; */
+    /* using percentage for better accessibility, scalability and maintainability: For example, if the user decides to change the default font size in their browser */
+    font-size: 62.5%; /* 62.5% of 16px = 10px */
+}
+
+body {
+    box-sizing: border-box;
+}

@@ -202,3 +202,23 @@ Let's intsall SASS Loaclly: with de package node-sass
 
 
 SECTION 5: Natours Project-using Advanced CSS and Saas
+There are essentially four big responsive web design principles: fluid layouts, responsive units, flexible images, media queries.
+Fluid layouts: --> To allow webpage to adapt to the current viewport width (or even height).
+               --> Use % (or vh / vw) unit instead of px for elements that should adapt to viewport (usaually layout)
+               --> Use max-width instead of width
+Responsive units: --> Use rem unit instead of px for most lengths.
+                  --> To make it easy to scale the entire layout down (or up) automatically as we need it.
+FLEXIBLE images: --> By default, images don't scale automatically as we change the viewport, so we need to fix that.
+                 --> Always use % for images dimensions, together with the max-width property.
+Media queries: --> To change CSS styles on certain viewport widths (called breakpoints). Basically media queries allows developpers to create different versions 
+of website for different types of devices.
+Layouts types: FLOAT LAYOUTS, FLEXBOX, CSS GRID
+FLOAT LAYOUTS: The old way of building layouts of all sizes, using the float CSS property. Still used, but getting outdated.
+FLEXBOX: Modern way of laying out elements in a 1-dimensional row without using floats. Perfect for component layouts.
+CSS GRID: For laying out element in a fully-fledged 2-dimensional grid. Perfect for page layouts nd complex components.
+For this first project, the focus will be on using modern CSS properties and techniques, also how FLOAT LAYOUTS works. In the second project, we will use FLEXBOX and in third we will use CSS GRID.
+
+Bulding a Custom GRID with floats: 
+When all the child elements are floated, their height collapses and becomes zero. So we have to use a clearfix to the parent.
+
+Bulding the About SECTION:

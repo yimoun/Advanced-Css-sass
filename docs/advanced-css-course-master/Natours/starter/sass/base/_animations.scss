@@ -1,0 +1,51 @@
+/* Deux types d'animation en CSS: transition,  */
+
+@keyframes moveInLeft {
+    /* avant que (ou début) l'animation ne commence réellement */
+    0%{ 
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+     /* à un pourcentage préci (par exemple 80%) de l'animation */
+    80%  {
+        transform: translateX(+1rem);
+    }
+
+    /* à la fin de l'animation */
+    100% {
+         opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    /* avant que (ou début) l'animation ne commence réellement */
+    0%{ 
+        opacity: 0;
+        transform: translateX(+10rem);
+    }
+     /* à un pourcentage préci (par exemple 50%) de l'animation */
+    80%  {
+        transform: translateX(-1rem);
+    }
+
+    /* à la fin de l'animation */
+    100% {
+         opacity: 1; 
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    /* avant que (ou début) l'animation ne commence réellement */
+    0%{ 
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    /* à la fin de l'animation */
+    100% {
+         opacity: 1;
+        transform: translateY(0);
+    }
+}
