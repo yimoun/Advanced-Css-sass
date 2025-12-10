@@ -222,3 +222,13 @@ Bulding a Custom GRID with floats:
 When all the child elements are floated, their height collapses and becomes zero. So we have to use a clearfix to the parent.
 
 Bulding the About SECTION:
+Before write any signle line of code we have to think about the architecture (7-1) and the web responsive design.
+S'agiisant de l'ACHITECTURE toujours se poser la question: << À quel dossier(fichier sass plus précisement) correpond ce selecteur? >>
+
+Pour saisir rapidement du HTLML5 et du CSS nous utiliserons l'extension Emmet 
+NB: À mettre une section bien rédigée dans le README final pour préciser les extenesions qui ont été installées/utilisées et pourquoi (pour chacune d'elle)
+
+"utilities classes" in CSS are very simple CSS classes wich only have one simple goal. De facon à etre indépendant et reutilisable.
+Toujours penser à ce que les élémeents doivent être réutilisables, indépendants pour de belles interfaces.
+
+Bulding the About SECTION (Part 2)
