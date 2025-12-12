@@ -232,3 +232,11 @@ NB: À mettre une section bien rédigée dans le README final pour préciser les
 Toujours penser à ce que les élémeents doivent être réutilisables, indépendants pour de belles interfaces.
 
 Bulding the About SECTION (Part 2)
+Bulding the Features Section
+    we use Linear for icons
+Bulding the Tours Section
+ --> How to use perspective in CSS
+ --> How to use backface-visibility property
+ --> How and when to use box-decoration-break
+    when the position is absolute, the element is removed from the normal document flow,
+    for example it will overlap other elements, the height of the parent will not take it into account

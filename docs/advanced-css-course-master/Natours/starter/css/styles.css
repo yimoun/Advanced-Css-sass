@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* Including all fonts which are in the fonts folder */
 @font-face {
   font-family: "linea-basic-10";
   src:url("fonts/linea-basic-10.eot");
@@ -38,9 +37,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-
-/* Define one class for each icon. Each class begins with "icon-basic-" prefix */
 
 .icon-basic-accelerator:before {
   content: "a";

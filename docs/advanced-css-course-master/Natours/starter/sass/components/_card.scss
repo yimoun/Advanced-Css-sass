@@ -1,0 +1,81 @@
+.card {
+
+   //FUNCTIONALITY FOR 3D EFFECT
+   perspective: 150rem;
+   -moz-perspective: 150rem;
+   position: relative;
+   height: 50rem;
+
+    &__side {
+         background-color: orangered;
+         font-size: 2rem;
+         height: 50rem;
+         transition: all .8s ease;
+         position: absolute;
+         top:0;
+         left: 0;
+         width: 100%;
+         backface-visibility: hidden; // to hide the back side when not facing the viewer
+         border-radius: 3px;
+         overflow: hidden;  // to clip the child elements that exceed the card boundaries
+         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+        &--front {
+            background-color: $color-white;
+        }
+
+        &--back {
+            background-color: blue;
+            //before we hover the card, this back side is already hidden
+            transform: rotateY(180deg);
+
+            &--back-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);  ;
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+        
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    //FRONT STYLE STYLING
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        // Only in Safari, Firefox and Google Chrome
+        background-blend-mode: screen; // to blend the color overlay with the image
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+             url(../img/nat-5.jpg);
+        }
+
+        &--2 {
+            background-image: url(../../img/nat-2.jpg);
+        }
+
+        &--3 {
+            background-image: url(../../img/nat-3.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute; // to position it over the image as we want
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+    }
+}
