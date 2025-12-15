@@ -240,3 +240,17 @@ Bulding the Tours Section
  --> How and when to use box-decoration-break
     when the position is absolute, the element is removed from the normal document flow,
     for example it will overlap other elements, the height of the parent will not take it into account
+
+Bukding the Stories Section Part 1:
+--> How to make text flow around shapes with shape-outside and float
+--> How to apply filter to img, to create background video covering an entire section.
+--> How and when to use the object-fit property
+
+Building the Booking Section - Part 1
+--> How to implement "solid-color gradient"
+--> Differants tools for differents situations: clip-path can easly be used like a linear-gradient for customizing color of background for example.
+--> adjacent sibling combinator: after the first element, select the second element to style it.
+--> Each time we use a pseudo-element, we have to actually specify its content and display properties.
+
+Bulding the Footer:
+-->

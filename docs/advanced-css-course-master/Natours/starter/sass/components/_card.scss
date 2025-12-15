@@ -4,12 +4,11 @@
    perspective: 150rem;
    -moz-perspective: 150rem;
    position: relative;
-   height: 50rem;
+   height: 52rem;
 
     &__side {
-         background-color: orangered;
          font-size: 2rem;
-         height: 50rem;
+         height: 52rem;
          transition: all .8s ease;
          position: absolute;
          top:0;
@@ -25,12 +24,19 @@
         }
 
         &--back {
-            background-color: blue;
             //before we hover the card, this back side is already hidden
             transform: rotateY(180deg);
 
-            &--back-1 {
-                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);  ;
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);  ;
+            }
+
+             &-3 {
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);  ;
             }
         }
     }
@@ -52,6 +58,8 @@
         background-blend-mode: screen; // to blend the color overlay with the image
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
 
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
@@ -59,11 +67,13 @@
         }
 
         &--2 {
-            background-image: url(../../img/nat-2.jpg);
+           background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+             url(../img/nat-6.jpg);
         }
 
         &--3 {
-            background-image: url(../../img/nat-3.jpg);
+             background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+             url(../img/nat-7.jpg);
         }
     }
 
@@ -75,7 +85,82 @@
         color: $color-white;
         position: absolute; // to position it over the image as we want
         top: 12rem;
-        right: 2rem;
+        right: 1rem;
         width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone; // to apply the box styles to each line of the heading
+        -webkit-box-decoration-break: clone;
+
+        &--1 {
+           background-image: linear-gradient(to right bottom, 
+           rgba($color-secondary-light, 0.85), 
+           rgba($color-secondary-dark, 0.85));
+        }
+
+        &--2 {
+           background-image: linear-gradient(to right bottom, 
+           rgba($color-primary-light, 0.85), 
+           rgba($color-primary-dark, 0.85));
+        }
+
+        &--3 {
+           background-image: linear-gradient(to right bottom, 
+           rgba($color-tertiary-light, 0.85), 
+           rgba($color-tertiary-dark, 0.85));
+        }
+    }
+
+    &__details{
+    padding: 3rem;
+    margin: 0 auto;
+
+    ul {
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;
+
+        li {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1rem;
+
+            &:not(:last-child) {
+                border-bottom: 2px solid $color-grey-light-2;
+            }
+        }
+    }
+    }
+
+    //BACK STYLE STYLING
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+    }
+
+    &__price-box {
+        text-align: center;
+        margin-bottom: 8rem;
+        color: $color-white;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        // margin-bottom: .7rem;
+        // color: $color-white;
+        // font-weight: 300;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        color: $color-white;
+        font-weight: 100;
     }
 }
