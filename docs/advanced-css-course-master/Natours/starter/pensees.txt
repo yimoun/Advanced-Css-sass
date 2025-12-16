@@ -253,4 +253,7 @@ Building the Booking Section - Part 1
 --> Each time we use a pseudo-element, we have to actually specify its content and display properties.
 
 Bulding the Footer:
--->
+Building the Navigation:
+--> How the "checkbox hack" is and how it works
+--> How to create an amazingly creative effect!
+--> The difference beetwen "linear-gradient" and "radial-gradient"
