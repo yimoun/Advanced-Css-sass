@@ -1,77 +1,174 @@
-<!doctype html>
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelson Junior - Portfolio en Construction</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-<header>
-<h1>Démos — Advanced CSS & Sass</h1>
-<p class="tip">Si tu ouvres ce fichier en <code>file://</code>, on utilisera le <strong>fallback JSON inline</strong>. En serveur (<code>http://</code>), on lit <code>sections.json</code>.</p>
-</header>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Nelson YIMOU</h1>
+            <p class="header__subtitle">Développeur Full Stack</p>
+            <div class="construction-badge">
+                <i class="fas fa-tools"></i>
+                <span>Portfolio en Construction</span>
+            </div>
+        </div>
+    </header>
 
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills-carousel">
+                <div class="carousel-track">
+                    <div class="skill-card">
+                        <i class="fab fa-react"></i>
+                        <h3>React</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-python"></i>
+                        <h3>Django</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>FastAPI</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h3>PostgreSQL</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-node-js"></i>
+                        <h3>Node.js</h3>
+                    </div>
+                    <!-- Duplicate pour effet carousel infini -->
+                    <div class="skill-card">
+                        <i class="fab fa-react"></i>
+                        <h3>React</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-python"></i>
+                        <h3>Django</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>FastAPI</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h3>PostgreSQL</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-node-js"></i>
+                        <h3>Node.js</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<ol id="list" class="grid" aria-live="polite"></ol>
+    <!-- Section Projets -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card__header">
+                        <h3>Projet Natours</h3>
+                        <span class="project-tag">Front End </span>
+                    </div>
+                    <p class="project-card__description">
+                    Le but ici est de revenir un temps soit peu sur des notion avancées de CSS que nous avons vu dans le cours précédent.
+                     On va donc créer un site web pour une agence de voyage fictive appelée Natours.
+                    </p>
+                    <div class="project-card__links">
+                        <a href="../docs/advanced-css-course-master/Natours/starter/index.html" class="btn btn--primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            Voir le projet
+                        </a>
+                        <a href="https://github.com/yimoun/Advanced-Css-sass" class="btn btn--secondary">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
 
+                <div class="project-card">
+                    <div class="project-card__header">
+                        <h3>ChatBotNelsonIA</h3>
+                        <span class="project-tag">Full Stack</span>
+                    </div>
+                    <p class="project-card__description">
+                        ChatBot IA intelligent développé pour un site e-commerce fictif (ShopEx) qui vend des produits high-tech. 
+                        Ce projet démontre l'intégration d'une IA générative avec des outils métiers concrets pour automatiser le support client et améliorer l'expérience utilisateur.
+                    </p>
+                    <div class="project-card__links">
+                        <a href="https://github.com/yimoun/ChatBotNelsonAI" class="btn btn--primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            Projet FINI mais pas encore déployé
+                        </a>
+                        <a href="https://github.com/yimoun/ChatBotNelsonAI" class="btn btn--secondary">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
 
-<!-- Fallback JSON inline pour usage en file:// -->
-<script type="application/json" id="sections-fallback">[
-{
-"slug": "advanced-css-course-master",
-"title": "Code principal du cours",
-"subtitle": "exercices continus"
-}
-]</script>
+                <div class="project-card">
+                    <div class="project-card__header">
+                        <h3>AICodeMentor_Backoard.io</h3>
+                        <span class="project-tag">Full Stack + IA</span>
+                    </div>
+                    <p class="project-card__description">
+                        Projet de préparation au Hackathon de McGill. 
+                        Le but ici est développer en équipe une plateforme de Mentorat pour des développeurs.
+                        Alimenter par une chatBot IA connectée à Backboard.io qui propose une mémoire persistente.
+                    </p>
+                    <div class="project-card__links">
+                        <a href="https://github.com/yimoun/AICodeMentor_Backoard.io" class="btn btn--primary">
+                            <i class="fas fa-external-link-alt"></i>
+                           Projet pas encore déployé
+                        </a>
+                        <a href="https://github.com/yimoun/AICodeMentor_Backoard.io" class="btn btn--secondary">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="improvement">
+        <div class="container">
+            <div class="improvement__content">
+                <i class="fas fa-rocket"></i>
+                <h2>Portfolio en Cours d'Amélioration</h2>
+                <p>
+                    Ce portfolio est actuellement en développement actif. Je travaille à l'amélioration continue de son design, 
+                    de ses fonctionnalités et de son contenu pour vous offrir une meilleure expérience et présenter mes projets 
+                    de manière optimale.
+                </p>
+                <p>Les projets sont en cours d'ajout et de mise à jour régulière.</p>
+                <p class="improvement__note">
+                    <i class="fas fa-info-circle"></i>
+                    Dernière mise à jour : Janvier 2026
+                </p>
+            </div>
+        </div>
+    </section>
 
-<script>
-async function main(){
-const items = await loadSections();
-console.log('les items', items)
-document.getElementById('list').innerHTML = items.map(card).join('');
-}
-
-
-async function loadSections(){
-// Essaie d'abord d'aller chercher sections.json via HTTP (fonctionne en serveur)
-try {
-const res = await fetch('./sections.json', { cache: 'no-store' });
-if (res.ok) return await res.json();
-} catch (_) { /* probablement CORS en file:// */ }
-// Fallback: lit le JSON inline si fetch a échoué
-const raw = document.getElementById('sections-fallback')?.textContent || '[]';
-try { return JSON.parse(raw); } catch { return []; }}
-function esc(s){return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')}
-function hrefFor(it){
-    //C'est ici que je construit l'URL d'une carte (à bien faire)
-// slug = chemin relatif depuis /docs vers un DOSSIER qui contient index.html
-return `../docs/advanced-css-course-master/Natours/starter/index.html`;
-//return `${it.slug.replace(/^\/+|\/+$/g,'')}/index.html`;
-}
-
-
-function esc(s){
-return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
-}
-
-
-function hrefFor(it){
-// slug = chemin relatif depuis /docs vers un DOSSIER qui contient index.html
-const clean = String(it.slug || '').replace(/^\/+|\/+$/g,'');
-return clean ? `${clean}/index.html` : '#';
-}
-
-
-function card(it){
-const href = hrefFor(it);
-const bullets = (it.learn||[]).slice(0,4).map(b => `<li>${esc(b)}</li>`).join('');
-return `<li class="card">
-<a href="${href}"><h3>${esc(it.title || 'Sans titre')}</h3></a>
-${it.subtitle ? `<p>${esc(it.subtitle)}</p>` : ''}
-${bullets ? `<ul>${bullets}</ul>` : ''}
-<a href="${href}">Ouvrir →</a>
-</li>`;
-}
-
-
-main();
-</script>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Nelson Junior Yimounou Bissi. Tous droits réservés.</p>
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/nelson-yimou-02493621a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yimoun" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
