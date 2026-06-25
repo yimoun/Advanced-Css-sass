@@ -17,6 +17,18 @@ html {
     /* font-size: 10px; */
     /* using percentage for better accessibility, scalability and maintainability: For example, if the user decides to change the default font size in their browser */
     font-size: 62.5%; /* 62.5% of 16px = 10px */
+
+    @include respond(tab-land) { // width < 1200px
+        font-size: 56.25%;     // 1 rem = 9px 9/16 = 56.25% of 16px
+    }
+
+     @include respond(tab-port) {   // width < 900px
+        font-size: 50%; // 1 rem = 8px, 8/16 = 50% of 16px
+    }
+
+     @include respond(big-desktop) {
+        font-size: 75%; // 1 rem = 12px 12/16 = 75% of 16px
+    }
 }
 
 body {

@@ -284,3 +284,7 @@ There are essentially four big responsive web design principles:
 
 
 # SECTION 5
+## Responsive Design strategies: MAX-WIDTH AND MIN-WIDTH
+
+Selecting the breakpoints
+rem ou em ne sont pas affectées dans les media-queries meme si la police change

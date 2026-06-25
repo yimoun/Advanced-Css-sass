@@ -1,4 +1,19 @@
 @charset "UTF-8";
+/*
+0 - 600px : phone
+600px - 900px : tablet portrait
+900px - 1200px : tablet landscape
+1200px - 1800px : laptop (IS where our normal styles are applied)
+1800px - 2400px : desktop
+
+$breakpoint argument choices: 
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+ */
 /* Universal selector */
 *,
 *::before,
@@ -13,6 +28,21 @@ html {
   /* font-size: 10px; */
   /* using percentage for better accessibility, scalability and maintainability: For example, if the user decides to change the default font size in their browser */
   font-size: 62.5%; /* 62.5% of 16px = 10px */
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
