@@ -19,7 +19,7 @@ This repository contains my work from the Advanced CSS & Sass course.
 - `docs/advanced-css-course-master/Trillo/`
   - `starter/` and `final/`
 
-Each project folder also includes a dedicated README that describes what I built, what I learned, and other important notes from the course.
+Each project folder also includes a dedicated THINKING.md that describes what I built, what I learned, and other important notes from the course.
 
 ## Why this repository?
 
